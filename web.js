@@ -2,11 +2,11 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-var buffy = fs.readFile('index.html', encoding String);
-
+// var buffy = fs.readFile('index.html', encoding String);
+var newapp = "Happy Tidings";
 
 app.get('/', function(request, response) {
-  response.send(buffy);
+  response.send(newapp);
 });
 
 var port = process.env.PORT || 5000;
