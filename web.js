@@ -2,8 +2,10 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-var buffy = fs.readFile('index.html');
+var fs = require('fs');
+var buffy = fs.readFileSync('index.html');
 var newapp = buffy.toString();
+
 // var newapp = "Happy Tidings";
 
 app.get('/', function(request, response) {
