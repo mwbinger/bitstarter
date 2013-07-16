@@ -2,8 +2,9 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-// var buffy = fs.readFile('index.html', encoding String);
-var newapp = "Happy Tidings";
+var buffy = fs.readFile('index.html');
+var newapp = buffy.toString();
+// var newapp = "Happy Tidings";
 
 app.get('/', function(request, response) {
   response.send(newapp);
